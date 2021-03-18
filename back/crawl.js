@@ -3,9 +3,6 @@ const cheerio = require('cheerio');
 const langs = require('./lang_data.json');
 
 class BaekjoonCrawl {
-    static langs = langs;
-    static host = 'https://www.acmicpc.net';
-
     /**
      * Convert language string to language id
      * @param {string} lang 
@@ -74,5 +71,8 @@ class BaekjoonCrawl {
         });
     }
 }
+
+BaekjoonCrawl.langs = langs;
+BaekjoonCrawl.host = 'https://www.acmicpc.net';
 
 module.exports = BaekjoonCrawl;
